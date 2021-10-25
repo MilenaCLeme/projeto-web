@@ -1,3 +1,39 @@
-body {
+* {
+  margin: 0;
+}
+
+#header {
   background-color: red;
+  height: 5em;
+}
+
+img {
+  width: 5em;
+  margin: 10px 10px 10px 50px;
+  border-radius: 10%;
+}
+
+.inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-bar {
+  margin: 10px 50px 10px 50px;
+  display: flex;
+}
+
+#nav-bar a {
+  padding: 10px;
+  text-decoration: none
+}
+
+#main h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 300px) {
+  
 }
