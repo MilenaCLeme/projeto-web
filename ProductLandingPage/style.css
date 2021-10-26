@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+}
+
+img {
+  width: 5em;
+  border-radius: 10%;
+}
+
+#header {
+  position: fixed;
+}
+
+.inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-bar {
+  margin: 10px 50px 10px 50px;
+  display: flex;
+}
+
+#nav-bar a {
+  padding: 10px;
+  text-decoration: none
+}
+
+#main h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  #header {
+    background-color: rgb(0, 0, 0);
+    width: auto;
+    height: 5em;
+  }
+
+  img {
+    margin: 10px 10px 10px 10px;
+  }
+
+  p {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #form {
+    padding: 2em;
+  }
+
+  #form input {
+    padding: 10px;
+    margin: 0 5px 0 5px;
+  }
+
+
+}
+
+@media screen and (max-width:950px) and (min-width:501px){
+  #header {
+    background-color: rgb(0, 0, 0);
+    width: auto;
+    height: 5em;
+  }
+
+  img {
+    margin: 10px 10px 10px 50px;
+  }
+
+  p {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #form {
+    padding: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+  #form input {
+    padding: 10px;
+  }
+
+  #filme {
+    margin: 0 5em 0 5em;
+  }
+
+  
+}
+
+@media screen and (min-width: 951px) {
+  #header {
+    background-color: rgb(0, 0, 0);
+    width: auto;
+    height: 5em;
+  }
+
+  img {
+    margin: 10px 10px 10px 60px;
+  }
+
+  p {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #form {
+    padding: 2em;
+    margin-left: 19em;
+    margin-right: 19em;
+  }
+
+  #form input {
+    padding: 10px;
+    margin-left: 5px;
+  }
+
+  #filme {
+    margin: 0 20em 0 20em;
+  }
+  
+}
