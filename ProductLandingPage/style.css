@@ -7,6 +7,10 @@ img {
   border-radius: 10%;
 }
 
+#header {
+  position: fixed;
+}
+
 .inicio {
   display: flex;
   justify-content: space-between;
