@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Tecnhinal Doc Page</title>
+</head>
+<body>
+  <main id="main-doc" class="main">
+    <div class="one">
+      <nav id="navbar">
+        <header class="headerNav">HTTP - Conceitos Tecnicos</header>
+        <ul class="navli">
+          <li>
+            <a class="nav-link" href="#Visão_Geral_HTTP">Visão Geral HTTP</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Componentes_de_sistemas">Componentes de sistemas</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Cookies_HTTP">Cookies HTTP</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Evolução_HTTP">Evolução HTTP</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Mensagens_HTTP">Mensagens HTTP</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Referencias">Referencias</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="two">
+      <section id="Visão_Geral_HTTP" class="main-section">
+        <header>
+          <h4>Visão Geral HTTP</h4>
+        </header>
+        <p>
+          <code>HTTP</code>é um protocolo <code>(protocol)</code> que permite a obtenção de recursos, como documentos <code>HTML</code>. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
+          Clientes e servidores se comunicam trocando mensagens individuais <code>(ao contrário de um fluxo de dados)</code>. As mensagens enviadas pelo cliente, geralmente um navegador da Web, são chamadas de solicitações <code>(requests)</code>, ou também requisições, e as mensagens enviadas pelo servidor como resposta são chamadas de respostas <code>(responses)</code>.
+          Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o <code>protocoloTCP</code>, ou em uma conexão <code>TCP</code> criptografada com <code>TLS</code>, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado
+        </p>
+        <p>
+          Mesmo com mais complexidade introduzida no HTTP/2.0 por encapsular mensagens HTTP em quadros (frames), o HTTP foi projetado para ser simples e legível às pessoas. As mensagens HTTP podem ser lidas e entendidas por qualquer um, provendo uma maior facilidade para desenvolvimento e testes, e reduzir a complexidade para os estudantes.
+        </p>
+      </section>
+      <section id="Componentes_de_sistemas" class="main-section">
+        <header>
+          <h4>Componentes de sistemas</h4>
+        </header>
+        <p>
+          O HTTP é um protocolo cliente-servidor: as requisições são enviados por uma entidade, o agente-usuário (ou um proxy em nome dele). A maior parte do tempo, o agente-usuário é um navegador da Web, mas pode ser qualquer coisa, como por exemplo um robô que varre a Web para preencher e manter um índice de mecanismo de pesquisa e coletar informações.
+          Cada requisição individual é enviada para um servidor, que irá lidar com isso e fornecer um resultado, chamado de resposta. Entre a solicitação e a resposta existem várias entidades, designadas coletivamente como proxies, que executam operações diferentes e atuam como gateways (intermediários) ou caches, por exemplo.
+          Na realidade, existem muitos outros computadores entre o navegador e o servidor que está tratando a requisição: existem roteadores, modems e muito mais. Graças ao modelo de camadas da Web, essas funcionalidades estão escondidas nas camadas de rede e transporte, respectivamente. O HTTP está no topo da camada de aplicação. Apesar de ser importante diagnosticar problemas de conectividade, as camadas subjacentes são irrelevantes para a descrição do HTTP.
+        </p>
+        <h5>Cliente: o agente-usuário</h5>
+        <p>
+          Oagente-usuário é qualquer ferramenta que age em nome do usuário. Essa função é predominantemente realizada pelo navegador Web; algumas poucas exceções são programas usados por engenheiros e desenvolvedores Web para debugar as suas aplicações.
+          O navegador sempre é a entidade que inicia as requisições, nunca o lado do servidor (embora alguns mecanismos tenham sido adicionados ao longo dos anos para simular mensagens iniciadas pelo servidor).
+          Para mostrar uma página Web, o navegador envia uma requisição para buscar o documento HTML da página. Ele então realiza uma análise sintática desse arquivo, buscando requisições adicionais correspondentes a scripts de execução, informações de layout (CSS) para apresentação e subrecursos contidos na página (geralmente imagens e vídeos). Depois o navegador interpreta esses recursos para mostrar ao usuário a página completa. Existem scripts executados pelo navegador que buscam mais recursos em fases subsequentes e conforme o uso da página e o navegador atualiza a página de acordo.
+          Uma página Web é um documento de hipertexto (HTML). Isso significa que algumas partes do texto mostrado são links (vínculos com outras páginas ou recursos da Web), os quais podem ser ativados (normalmente pelo clique do mouse) para buscar uma nova página, permitindo ao usuário redirecionar seu agente-usuário e navegar pela internet. O navegador traduz esses endereços em requisições HTTP e depois interpreta as respostas HTTP para mostrar ao usuário uma resposta transparente.
+        </p>
+        <h5>O servidor de páginas Web</h5>
+        <p>
+          Do outro lado do canal de comunicação está o servidor que serve o documento requisitado pelo usuário. Um servidor se apresenta virtualmente apenas como uma máquina: isto porque o servidor pode ser uma coleção de servidores dividindo a carga (através de uma técnica chamada balanceamento de carga) ou também como um programa complexo que acessa outros servidores (como um cache, um servidor de banco de dados, servidores de e-commerce (lojas virtuais), etc.), gerando toda ou parte do documento solicitado.
+          Um servidor não é necessáriamente apenas uma máquina, mas vários servidores podem estar hospedados na mesma máquina. Com o HTTP/1.1 e o cabeçalho Host, eles podem até compartilhar o mesmo endereço IP.
+        </p>
+      </section>
+      <section id="Cookies_HTTP" class="main-section">
+        <header>
+          <h4>Cookies HTTP</h4>
+        </header>
+        <p>
+          Um cookie HTTP (um cookie web ou cookie de navegador) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode armazenar estes dados e enviá-los de volta na próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo HTTP sem estado.
+
+          Cookies são usados principalmente para três propósitos:
+        </p>
+        <ul>
+          <li>Gerenciamento de sessão</li>
+          <li>Personalização</li>
+          <li>Rastreamento</li>
+        </ul>
+        <p>
+          Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis).  APIs modernas de armazenamento no cliente são Web storage API (localStorage e sessionStorage) e IndexedDB.
+        </p>
+      </section>
+      <section id="Evolução_HTTP" class="main-section">
+        <header>
+          <h4>Evolução HTTP</h4>
+        </header>
+        <p>
+          HTTP (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has gone through many changes that have helped maintain its simplicity while shaping its flexibility. Keep reading to learn how HTTP evolved from a protocol designed to exchange files in a semitrusted laboratory environment into a modern internet maze that carries images and videos in high resolution and 3D.
+          In 1989, while working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the internet. Initially called the Mesh, it was later renamed the World Wide Web during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:
+        </p>
+        <ul>
+          <li>A textual format to represent hypertext documents, the HyperText Markup Language (HTML).</li>
+          <li>A simple protocol to exchange these documents, the HypertText Transfer Protocol (HTTP).</li>
+          <li>A client to display (and edit) these documents, the first web browser called the WorldWideWeb.</li>
+          <li>A server to give access to the document, an early version of httpd.</li>
+        </ul>
+        <p>
+          These four building blocks were completed by the end of 1990, and the first servers were running outside of CERN by early 1991. On August 6, 1991, Tim Berners-Lee posted on the public alt.hypertext newsgroup. This is now considered to be the official start of the World Wide Web as a public project.
+          The HTTP protocol used in those early phases was very simple. It was later dubbed HTTP/0.9 and is sometimes called the one-line protocol.
+          The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method GET followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
+        </p>
+      </section>
+      <section id="Mensagens_HTTP" class="main-section">
+        <header>
+          <h4>Mensagens HTTP</h4>
+        </header>
+        <p>
+          Dados são trocados entre servidor e cliente por meio de mensagens HTTP. Há dois tipos de mensagens: requisições (requests) enviadas pelo cliente para disparar uma ação no servidor, e respostas (responses), a réplica do servidor.
+          Mensagens HTTP são compostas de informação textual codificada em ASCII, e se espalham por multiplas linhas. Em HTTP/1.1, e versões anteriores do protocolo, estas mensagens eram abertamente enviadas através da conexão. Em HTTP/2, a mensagem antes legível por humanos é agora dividida em quadros HTTP, resultando em otimização e melhora de desempenho.
+          Desenvolvedores Web, ou webmasters, raramente lidam com essas mensagens textuais diretamente: um programa, um navegador, um proxy, ou um servidor Web, executam essa ação. Eles proveem mensagens HTTP por meio de arquivos de configuração (para  proxys ou servidores), APIs (para navegadores) ou outras interfaces.
+        </p>
+      </section>
+      <section id="Referencias" class="main-section">
+        <header>
+          <h4>Referencias</h4>
+        </header>
+        <article>
+          <p>
+            Conteudo retirado do:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP"
+              target="_blank"
+              >MDN</a
+            >
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
