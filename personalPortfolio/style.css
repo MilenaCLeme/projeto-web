@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+}
+
+header {
+  padding: 2em;
+  background-color: palevioletred;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar a {
+  padding: 0 5em 0 5em;
+  text-decoration: none;
+  color: black;
+}
+
+#welcome-section {
+  padding: 5em 0 5em 1em;
+}
+
+#welcome-section h1 {
+  margin: 0 0 2em 0;
+  text-align: center;
+}
+
+#welcome-section h4 {
+  margin: 1em 5em 1em 5em;
+  text-indent: 5%;
+}
+
+#welcome-section p {
+  margin: 0 5em 2em 5em;
+  text-indent: 2px;
+}
+
+#welcome-section div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#welcome-section div a {
+  margin: 10px;
+  padding: 10px 2em 0 2em;
+  text-decoration: none;
+  color: black;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  margin: 5em 2em 5em 2em;
+}
+
+.project-tile {
+  margin: 0 30px 30px 30px;
+  border: 2px solid #000;
+}
+
+.project-tile a {
+  padding: 2px;
+  text-decoration: none;
+  color: black;
+}
+
+.project-tile a h4 {
+  text-align-last: center;
+}
+
+.project-tile a p {
+  margin: 5px;
+  text-align-last: justify;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  header {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: palevioletred;
+  }
+
+  #navbar a {
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    color: black;
+  }
+
+  #welcome-section {
+    padding: 3em 0 3em 1em;
+  }
+
+  #welcome-section h1 {
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  #welcome-section h4 {
+    margin: 5px 0 10px 0;
+    text-indent: 5%;
+  }
+
+  #welcome-section p {
+    margin: 0 10px 20px 0;
+    text-indent: 2px;
+    text-align-last: justify;
+  }
+
+  #welcome-section div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #welcome-section div a {
+    margin: 5px;
+    padding: 10px 2em 0 2em;
+    text-decoration: none;
+    color: black;
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-tile {
+    margin: 0 30px 30px 30px;
+    border: 2px solid #000;
+  }
+
+  .project-tile a {
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .project-tile a h4 {
+    text-align-last: center;
+  }
+
+  .project-tile a p {
+    margin: 5px;
+    text-align-last: center;
+  }
+
+}
+
